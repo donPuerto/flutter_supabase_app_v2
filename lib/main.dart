@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Supabase App addtional',
+      title: 'Flutter Supabase App addtional testing',
       theme: ThemeData(
         // This is the theme of your application.
         //
