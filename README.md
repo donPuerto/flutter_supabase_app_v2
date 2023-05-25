@@ -4,25 +4,25 @@ A showcase of Flutter and Supabase Implementation
 
 ## Project Featured
 
-App used
-- Flutter
-- Supabase
+Primary App used
+* Flutter
+* Supabase
 
 Platform
-- Web
-- Android/IOS
+* Web
+* Android/IOS
 
 Themes
-- Flex Color Scheme
+* Flex Color Scheme
 
 State Management
-- Hook Riverpod
+*  Hook Riverpod
 
 Fonts
-- Google Fonts
+*  Google Fonts
 
 Utils
-- Responsive Builder
+*  Responsive Builder
 
 Pages
   Authentication
