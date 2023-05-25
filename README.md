@@ -1,9 +1,9 @@
-# Flutter Supabase Project
+#### Flutter Supabase Project
 
-A showcase of Flutter and Supabase Implementation
+> A showcase of Flutter and Supabase Implementation
 
-## Project Featured
 
+#### Project Featured
 Primary App used
 * Flutter
 * Supabase
