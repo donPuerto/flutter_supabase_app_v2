@@ -1,23 +1,32 @@
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'pages/auth/sign_in/sign_in_layout_builder.dart';
+import 'pages/theme_demo.dart';
+import 'theme_controller.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ResponsiveApp(
-      builder: (context) {
-        return const MaterialApp(
-          title: 'Flutter Supabase Appv2',
-          home: SignInLayoutBuilder(),
+    return Consumer(
+      builder: (_, ref, __) {
+        final theme = ref.watch(themeProvider);
+        return ResponsiveApp(
+          builder: (context) {
+            return MaterialApp(
+              title: 'Flutter Supabase Appv2',
+              theme: theme,
+              home: const ThemeDemo(),
+            );
+          },
         );
       },
     );
