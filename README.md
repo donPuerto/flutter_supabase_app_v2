@@ -25,7 +25,7 @@ Utils
 *  Responsive Builder
 
 Pages
-  Authentication
+  * Authentication
     * Sign Up
     * Sign In
     * Create Password
