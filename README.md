@@ -24,7 +24,7 @@
 > Utils
 > *  Responsive Builder
 
-> Pages
+### Pages
 >   * Authentication
 >     * Sign Up
 >     * Sign In
