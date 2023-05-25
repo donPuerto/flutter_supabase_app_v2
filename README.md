@@ -1,16 +1,36 @@
-# flutter_supabase_app_v2
+# Flutter Supabase Project
 
-A new Flutter project.
+A showcase of Flutter and Supabase Implementation
 
-## Getting Started
+## Project Featured
 
-This project is a starting point for a Flutter application.
+App used
+- Flutter
+- Supabase
 
-A few resources to get you started if this is your first Flutter project:
+Platform
+- Web
+- Android/IOS
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Themes
+- Flex Color Scheme
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State Management
+- Hook Riverpod
+
+Fonts
+- Google Fonts
+
+Utils
+- Responsive Builder
+
+Pages
+  Authentication
+    - Sign Up
+    - Sign In
+    - Create Password
+    - Change Password
+    - Forgot Password
+    - Password Recovery
+    - OTP 
+
