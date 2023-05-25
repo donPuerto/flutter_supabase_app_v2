@@ -4,9 +4,9 @@
 
 
 ### Project Featured
-Primary App used
-* Flutter
-* Supabase
+> Primary App used
+> * Flutter
+> * Supabase
 
 Platform
 * Web
