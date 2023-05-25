@@ -3,34 +3,34 @@
 > A showcase of Flutter and Supabase Implementation
 
 
-### Project Featured
-> Primary App used
+### Project Apps
 > * Flutter
 > * Supabase
 
-Platform
-* Web
-* Android/IOS
+### Packages
+> Platform
+> * Web
+> * Android/IOS
 
-Themes
-* Flex Color Scheme
+> Themes
+> * Flex Color Scheme
 
-State Management
-*  Hook Riverpod
+> State Management
+> *  Hook Riverpod
 
-Fonts
-*  Google Fonts
+> Fonts
+> *  Google Fonts
 
-Utils
-*  Responsive Builder
+> Utils
+> *  Responsive Builder
 
-Pages
-  * Authentication
-    * Sign Up
-    * Sign In
-    * Create Password
-    * Change Password
-    * Forgot Password
-    * Password Recovery
-    * OTP 
+> Pages
+>   * Authentication
+>     * Sign Up
+>     * Sign In
+>    * Create Password
+>    * Change Password
+>    * Forgot Password
+>    * Password Recovery
+>    * OTP 
 
