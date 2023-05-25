@@ -26,11 +26,11 @@ Utils
 
 Pages
   Authentication
-    - Sign Up
-    - Sign In
-    - Create Password
-    - Change Password
-    - Forgot Password
-    - Password Recovery
-    - OTP 
+    * Sign Up
+    * Sign In
+    * Create Password
+    * Change Password
+    * Forgot Password
+    * Password Recovery
+    * OTP 
 
