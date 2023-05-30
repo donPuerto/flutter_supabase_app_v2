@@ -3,26 +3,35 @@
 > A showcase of Flutter and Supabase Implementation
 
 
+
 ### Project Apps
 > * Flutter
 > * Supabase
 
-### Packages
-> Platform
+
+
+### Platform
 > * Web
 > * Android/IOS
 
+
+
+### Packages
+> Database
+> * supabase_flutter
+
 > Themes
-> * Flex Color Scheme
+> * flex_color_scheme
 
 > State Management
-> *  Hook Riverpod
+> * hooks_riverpod
 
 > Fonts
-> *  Google Fonts
+> * google_fonts
 
 > Utils
-> *  Responsive Builder
+> * responsive_builder
+
 
 ### Pages
 >   * Authentication

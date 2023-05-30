@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../theme_controller.dart';
+import '../themes/theme_controller.dart';
 
 class ThemeDemo extends HookConsumerWidget {
   const ThemeDemo({Key? key}) : super(key: key);
@@ -142,7 +142,9 @@ class ThemeDemo extends HookConsumerWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: theme.switchTheme),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => theme.setTheme(ThemeOption.dark),
+      ),
     );
   }
 }
