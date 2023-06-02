@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'custom_snackbar_widget.dart';
-
 enum ButtonType {
   TextButton,
   ElevatedButton,
@@ -11,17 +9,17 @@ enum ButtonType {
 }
 
 class CustomSubmitButton extends StatefulWidget {
-  final Function submitFunction;
+  final VoidCallback onPressed;
   final String buttonText;
   final ButtonType buttonType;
   final bool isLoading;
 
   const CustomSubmitButton({
     Key? key,
-    required this.submitFunction,
     required this.buttonText,
     required this.buttonType,
     required this.isLoading,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -42,24 +40,34 @@ class _CustomSubmitButtonState extends State<CustomSubmitButton> {
   }
 
   Widget _buildButton(BuildContext context) {
-    switch (widget.buttonType) {
-      case ButtonType.TextButton:
-        return TextButton(
-          onPressed: widget.isLoading ? null : _handleButtonPress,
-          child: _buildButtonText(),
-        );
-      case ButtonType.ElevatedButton:
-        return ElevatedButton(
-          onPressed: widget.isLoading ? null : _handleButtonPress,
-          child: _buildButtonText(),
-        );
-      case ButtonType.OutlinedButton:
-        return OutlinedButton(
-          onPressed: widget.isLoading ? null : _handleButtonPress,
-          child: _buildButtonText(),
-        );
-      default:
-        throw Exception('Invalid button type: ${widget.buttonType}');
+    try {
+      switch (widget.buttonType) {
+        case ButtonType.TextButton:
+          return TextButton(
+            onPressed: widget.isLoading ? null : widget.onPressed,
+            child: _buildButtonText(),
+          );
+        case ButtonType.ElevatedButton:
+          return ElevatedButton(
+            onPressed: widget.isLoading ? null : widget.onPressed,
+            child: _buildButtonText(),
+          );
+        case ButtonType.OutlinedButton:
+          return OutlinedButton(
+            onPressed: widget.isLoading ? null : widget.onPressed,
+            child: _buildButtonText(),
+          );
+        default:
+          throw Exception('Invalid button type: ${widget.buttonType}');
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Invalid button type encountered.'),
+          duration: Duration(seconds: 2),
+        ),
+      );
+      rethrow;
     }
   }
 
@@ -70,26 +78,5 @@ class _CustomSubmitButtonState extends State<CustomSubmitButton> {
         widget.buttonText,
       ),
     );
-  }
-
-  Future<void> _handleButtonPress() async {
-    if (widget.isLoading) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        CustomSnackbarWidget(
-          message: 'Unexpected error occurred',
-          type: SnackBarType.Error,
-        ),
-      ); // Don't process button press if loading
-    }
-
-    try {
-      await widget.submitFunction(context);
-    } catch (error) {
-      // Handle error
-    }
-
-    if (widget.isLoading) {
-      return; // Don't process button press if loading
-    }
   }
 }

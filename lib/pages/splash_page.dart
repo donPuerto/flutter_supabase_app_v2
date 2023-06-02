@@ -1,6 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:lottie/lottie.dart';
+import 'package:page_transition/page_transition.dart';
+import '../shared/widgets/footer_widget.dart';
+import '../shared/widgets/logo_widget.dart';
 import 'auth/sign_in/sign_in_layout_builder.dart';
 
 // import 'main_page.dart';
@@ -17,24 +22,25 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnimatedSplashScreen(
-        duration: 1500,
-        splashIconSize: double.infinity,
-        splash: ListView(
-          padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+      body: Container(
+        alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              children: [
-                const Logo(),
-                SizedBox(height: 23.h),
-                const Footer(),
-              ],
+            Expanded(
+              child: AnimatedSplashScreen(
+                duration: 1500,
+                splashIconSize: double.infinity,
+                splash: Lottie.asset('assets/lottie/happy-face-loading.json'),
+                nextScreen: const SignInLayoutBuilder(),
+                splashTransition: SplashTransition.fadeTransition,
+                pageTransitionType: PageTransitionType.fade,
+              ),
             ),
+            const SizedBox(height: 16.0),
+            FooterWidget(),
           ],
         ),
-        nextScreen: const SignInLayoutBuilder(),
-        splashTransition: SplashTransition.fadeTransition,
-        pageTransitionType: PageTransitionType.fade,
       ),
     );
   }

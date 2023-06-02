@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
         return ResponsiveApp(
           builder: (context) {
             return MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'Flutter Supabase Appv2',
               theme: theme,
               navigatorKey: navigatorKey,

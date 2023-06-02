@@ -45,6 +45,8 @@ dependencies:
   font_awesome_flutter: ^10.4.0
   animated_splash_screen: ^1.3.0
   lottie: ^2.3.2
+  page_transition: ^2.0.9
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +74,7 @@ flutter:
   assets:
       - .env
       - assets/images/
-  #   - images/a_dot_ham.jpeg
+      - assets/lottie/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
